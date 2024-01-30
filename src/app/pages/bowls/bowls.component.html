@@ -1,0 +1,44 @@
+<div class="back" routerLink="/home">
+  Back
+</div>
+<div class="bowls">
+  <div class="bowls-header">
+    <h1>Acai Bowls</h1>
+  </div>
+  <div class="bowls-container">
+    <div class="bowls__image-container" *ngFor="let bowl of bowls">
+      <img src="assets/clipart/acai-bowl.svg" alt="acai-bowl">
+      <div class="bowls__image-container-text">
+        {{bowl.name}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bowl" *ngFor="let bowl of acaiBowls">
+  <div class="bowl-header">
+    {{bowl.name}}
+  </div>
+  <div class="recipee">
+    <div class="recipee__mix">
+      <div class="recipee__mix-title">
+        Mix
+      </div>
+      <div class="recipee__mix-ingredient" *ngFor="let ingredient of bowl.mix">
+        <img src="{{ingredient.imageUrl}}" alt="{{ingredient.alt}}">
+        <span>{{ingredient.name}}</span>
+      </div>
+    </div>
+    <div class="recipee__toppings">
+      <div class="recipee__toppings-title">
+        Toppings
+      </div>
+      <div class="recipee__mix-topping" *ngFor="let topping of bowl.toppings">
+        <img src="{{topping.imageUrl}}" alt="{{topping.alt}}">
+        <span>{{topping.name}}</span>
+      </div>
+    </div>
+    <div class="recipee__picture">
+      <img src="{{bowl.image}}" alt="bowl-image">
+    </div>
+  </div>
+</div>
