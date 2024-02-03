@@ -1,0 +1,14 @@
+<div class="home">
+  <div class="home__title">
+    <h1>Welcome to Rise Up</h1>
+    <h2>Training you in no time</h2>
+  </div>
+  <div class="home__links">
+    <div class="home__links-link" *ngFor="let link of links" routerLink="/{{link.route}}">
+      <img src="{{link.url}}" alt="image-link">
+      <span>
+        {{link.label}}
+      </span>
+    </div>
+  </div>
+</div>
