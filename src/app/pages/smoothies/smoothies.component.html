@@ -1,0 +1,93 @@
+<div class="back" routerLink="/home">
+  Back
+</div>
+<div class="top" (click)="scrollToTop()" *ngIf="showScroll">
+  Scroll to Top
+</div>
+<div class="smoothies">
+  <div class="smoothies-header">
+    <h1>Smoothies</h1>
+  </div>
+  <div class="smoothies-container">
+    <div class="smoothies__image-container" *ngFor="let smoothie of smoothies">
+      <img (click)="scrollToSmoothie(smoothie.route)" src="assets/clipart/smoothie-cup.png" alt="{{smoothie.route}}">
+      <div class="smoothies__image-container-text">
+        {{smoothie.name}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="smoothies">
+  <div class="smoothies-header">
+    <h1>Protein Smoothies</h1>
+  </div>
+  <div class="smoothies-container">
+    <div class="smoothies__image-container" *ngFor="let smoothie of proteinSmoothies">
+      <img (click)="scrollToSmoothie(smoothie.route)" src="assets/clipart/smoothie-cup.png" alt="{{smoothie.route}}">
+      <div class="smoothies__image-container-text">
+        {{smoothie.name}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="smoothies">
+  <div class="smoothies-header">
+    <h1>Coffee/Matcha Smoothies</h1>
+  </div>
+  <div class="smoothies-container">
+    <div class="smoothies__image-container" *ngFor="let smoothie of coffeeMatchaSmoothies">
+      <img (click)="scrollToSmoothie(smoothie.route)" src="assets/clipart/smoothie-cup.png" alt="{{smoothie.route}}">
+      <div class="smoothies__image-container-text">
+        {{smoothie.name}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="smoothies-header">
+  <h1>Smoothies</h1>
+</div>
+<div class="smoothie" *ngFor="let smoothie of smoothieRecipes">
+  <div id="{{smoothie.route}}" class="smoothie-header">
+    {{smoothie.name}}
+  </div>
+  <div class="recipee">
+    <div class="recipee__mix">
+      <div class="recipee__mix-ingredient" *ngFor="let ingredient of smoothie.mix">
+        <img src="{{ingredient.imageUrl}}" alt="{{ingredient.alt}}">
+        <span>{{ingredient.name}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="smoothies-header">
+  <h1>Protein Smoothies</h1>
+</div>
+<div class="smoothie" *ngFor="let smoothie of proteinSmoothieRecipes">
+  <div id="{{smoothie.route}}" class="smoothie-header">
+    {{smoothie.name}}
+  </div>
+  <div class="recipee">
+    <div class="recipee__mix">
+      <div class="recipee__mix-ingredient" *ngFor="let ingredient of smoothie.mix">
+        <img src="{{ingredient.imageUrl}}" alt="{{ingredient.alt}}">
+        <span>{{ingredient.name}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="smoothies-header">
+  <h1>Coffee/Matcha Smoothies</h1>
+</div>
+<div class="smoothie" *ngFor="let smoothie of coffeeMatchaSmoothieRecipes">
+  <div id="{{smoothie.route}}" class="smoothie-header">
+    {{smoothie.name}}
+  </div>
+  <div class="recipee">
+    <div class="recipee__mix">
+      <div class="recipee__mix-ingredient" *ngFor="let ingredient of smoothie.mix">
+        <img src="{{ingredient.imageUrl}}" alt="{{ingredient.alt}}">
+        <span>{{ingredient.name}}</span>
+      </div>
+    </div>
+  </div>
+</div>

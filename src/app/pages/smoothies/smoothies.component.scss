@@ -1,0 +1,187 @@
+@import 'include-media';
+
+.back {
+  position: absolute;
+  left: 200px;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  width: 100px;
+  border-radius: 25%;
+  background-color: white;
+
+  &:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+  }
+}
+
+.top {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  bottom: 0;
+  background-color: lightblue;
+  color: black;
+  width: 100px;
+  height: 50px;
+  border-top-left-radius: 15px;
+  padding: 0.3rem;
+  text-align: center;
+  transition: 0.1s linear;
+  z-index: 5;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(159, 198, 212);
+  }
+}
+
+.smoothies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px 35px;
+  max-width: 800px;
+  height: 100vh;
+  margin: auto;
+}
+
+.smoothies-header {
+  h1 {
+    font-size: xxx-large;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.smoothies-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.smoothies__image-container {
+  position: relative;
+  width: 125px;
+  transition: 0.2s linear;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+    filter: brightness(1.15);
+  }
+}
+
+.smoothies__image-container-text {
+  position: absolute;
+  top: 60%;
+  left: 57%;
+  color: white;
+  padding: 0.2rem;
+  min-width: 75px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(2, 142, 139);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.smoothie {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 50px 0;
+  margin: 50px;
+}
+
+.smoothie-header {
+  color: white;
+  font-size: 75px;
+  text-align: center;
+  text-transform: uppercase;
+  width: auto;
+  margin: auto;
+  padding: 0.7rem 2rem;
+  margin-bottom: 50px;
+  background-color: rgb(226, 66, 66);
+  border-radius: 15px;
+}
+
+.recipee__mix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.recipee__mix-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.recipee__mix-ingredient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  span {
+    background-color: whitesmoke;
+    padding: 0.2rem;
+  }
+
+  img {
+    width: 100px;
+  }
+}
+
+@include media('<tablet') {
+  .smoothie-header {
+    font-size: 30px;
+  }
+
+  .smoothies__image-container {
+    transition: none;
+  
+    &:hover {
+      transform: none;
+      filter: none;
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .back {
+    position: relative;
+    border-radius: 0;
+    left: 0;
+    top: 0;
+  }
+
+  .smoothies {
+    height: auto;
+    padding: 40px 35px;
+  }
+}
