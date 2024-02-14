@@ -1,0 +1,107 @@
+@import 'include-media';
+
+.back {
+  position: absolute;
+  left: 200px;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  width: 100px;
+  border-radius: 25%;
+  background-color: white;
+
+  &:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+  }
+}
+
+.coffee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 7rem;
+  padding: 150px 0 100px;
+}
+
+.coffee-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10rem;
+  padding: 0 25px;
+}
+
+.coffee-container__img {
+  width: 100px;
+  img {
+    width: 150px;
+  }
+}
+
+.coffee-container__img-americano {
+  img {
+    width: 90px;
+  }
+}
+
+.coffee-container__desc--title {
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 1px solid black;
+}
+
+.coffee-container__desc--text {
+  max-width: 200px;
+}
+
+.coffee-container__desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.4rem;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+@include media('<tablet') {
+  .back {
+    left: 100px;
+  }
+
+  .coffee {
+    gap: 6rem;
+    flex-direction: column;
+  }
+
+  .coffee-container {
+    row-gap: 2rem;
+    column-gap: 5rem;
+    padding: 0 4rem;
+  }
+
+  .coffee-container__img {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 490px) {
+  .back {
+    position: relative;
+    border-radius: 0;
+    left: 0;
+    top: 0;
+  }
+
+  .coffee {
+    padding: 50px 0 100px;
+  }
+}
