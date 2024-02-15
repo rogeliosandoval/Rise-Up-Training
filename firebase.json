@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/rise-up-training",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
