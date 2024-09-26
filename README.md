@@ -1,6 +1,4 @@
 <h1>Rise Up Training</h1>
-<a href="https://rise-up-training.web.app/home"><b>Live Demo</b></a>
-<br>
 <h3>Framework Used:</h3>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" width="68px;"/>
 <h3>Technologies Used:</h3>
